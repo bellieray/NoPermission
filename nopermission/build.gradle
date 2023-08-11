@@ -35,7 +35,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.bellieray'
+                groupId = 'com.ebelli.nopermission'
                 artifactId = 'nopermission'
                 version = '1.0.1'
             }
