@@ -38,7 +38,7 @@ object PermissionUtil {
         result: Map<String, Boolean>,
         listener: NoPermissionListener
     ) {
-        when (getPermissionState(activity, result)) {
+        when (getPermissionType(activity, result)) {
             is NoPermissionResulType.Granted -> listener.onPermissionGranted(result.keys.first())
             is NoPermissionResulType.Denied -> listener.onPermissionDenied(result.keys.first())
             is NoPermissionResulType.PermanentlyDenied -> listener.onPermissionPermanentlyDenied(
@@ -47,7 +47,7 @@ object PermissionUtil {
         }
     }
 
-    private fun getPermissionState(
+    private fun getPermissionType(
         activity: Activity,
         result: Map<String, Boolean>
     ): NoPermissionResulType {
