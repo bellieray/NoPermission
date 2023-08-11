@@ -37,7 +37,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.ebelli.nopermission'
                 artifactId = 'nopermission'
-                version = '1.0.1'
+                version = '1.0.3'
             }
         }
     }
